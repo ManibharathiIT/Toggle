@@ -1,0 +1,18 @@
+<p><mat-slide-toggle (change)="onChange()">{{temp}}</mat-slide-toggle></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let obj of data">
+    <td>{{obj.name}}</td>
+    <td>{{obj.email}}</td>
+    <td>{{obj.phone}}</td>
+    <td><button (click)="onDelete(obj.id)">Delete</button></td>
+  </tbody>
+</table>
